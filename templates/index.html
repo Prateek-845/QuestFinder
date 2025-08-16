@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuestFinder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <h1 class="logo">QuestFinder</h1>
+  </div>
+</header>
+
+<main class="container">
+    <section>
+        <h2 class="section-title">Top Rated Games</h2>
+        <ul id="popular_games" class="grid-list"></ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">Recommendations by UserId</h2>
+        <form class="form-section" onsubmit="getRecommendations(); return false;">
+            <input type="text" id="user_id" placeholder="Enter UserId(eg:A2204E1TH211HT)" autocomplete="off" />
+            <button type="submit">Get Recommendations</button>
+        </form>
+        <ul id="recommendations" class="grid-list"></ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">Recommendations by Game Title</h2>
+        <form class="form-section" onsubmit="getRecommendationsByTitle(); return false;">
+            <input type="text" id="game_title" placeholder="Enter Game Title" autocomplete="off" />
+            <button type="submit">Get Recommendations</button>
+        </form>
+        <ul id="title_recommendations" class="grid-list"></ul>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© 2025 QuestFinder. All rights reserved.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
