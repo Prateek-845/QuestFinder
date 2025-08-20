@@ -1,7 +1,7 @@
 # QuestFinder
 
 QuestFinder is a web application for exploring and recommending classic and retro video games using Amazon review data.  
-The system predicts top-rated games, generates personalized recommendations for each user, and suggests similar games based on title search.
+The system predicts top rated games, generates personalized recommendations for each user, and suggests similar games based on title search.
 
 ---
 
